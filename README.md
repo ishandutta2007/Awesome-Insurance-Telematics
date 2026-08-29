@@ -22,35 +22,22 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-- **[Cambridge Mobile Telematics (CMT)](https://www.cmtelematics.com/)**  
-  Leading smartphone-based telematics platform powering many major UBI and safe-driving programs with advanced sensing, distraction detection, and risk scoring.
-
-- **[Octo Telematics](https://www.octotelematics.com/)**  
-  Global insurance telematics provider offering both hardware and smartphone solutions, widely used across Europe and other markets for UBI and claims services.
-
-- **[IMS](https://www.ims.tech/)**  
-  Insurance telematics specialist providing smartphone and device-based solutions for usage-based insurance and driver behavior insights.
-
-- **[TrueMotion (Cambridge Mobile Telematics)](https://www.cmtelematics.com/)**  
-  Smartphone telematics technology (now part of the broader CMT portfolio) focused on accurate trip detection and driving behavior measurement.
-
-- **[Arity](https://www.arity.com/)**  
-  Mobility data and analytics company (Allstate-backed) offering telematics-derived risk insights and UBI capabilities.
-
-- **[DriveQuant](https://www.drivequant.com/)**  
-  Smartphone telematics and driving-behavior analytics platform used by insurers and mobility players for scoring and engagement.
-
-- **[The Floow](https://www.thefloow.com/)**  
-  Telematics and data-analytics provider specializing in insurance and mobility risk insights, with strong European presence.
-
-- **[LexisNexis Telematics / Risk Solutions](https://risk.lexisnexis.com/)**  
-  Data and analytics offerings that incorporate telematics and driving data into insurance risk assessment and underwriting tools.
-
-- **[Trak Global / Trakm8 and related](https://www.trakglobal.com/)**  
-  Telematics and connected-vehicle solutions serving insurance and fleet use cases.
-
-- **[Greater Than](https://www.greaterthan.eu/)**  
-  AI-powered risk assessment platform that uses driving and mobility data to generate insurance risk scores and insights.
+| Platform / Product | Description & Focus | Starting Pricing | Free Tier / Free Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[Damoov](https://damoov.com/)** | Mobile telematics SDK & API platform for smartphone trip tracking, driving behavior scoring, and UBI apps. | **$250/month** (Starter tier, up to 100 drivers; $2/driver/month for additional drivers) | **Free tier**: Up to 10,000 API calls/month + 90-day developer sandbox (no credit card required) |
+| **[Zubie](https://zubie.com/)** | Fleet & auto telematics SaaS providing driver scoring, vehicle health analytics, and insurer discount integrations. | **$15/vehicle/month** (AssetTrak) or **$18–$24/vehicle/month** (Fleet OBD-II tracking) | **30-day free trial** (includes live vehicle tracking, safety alerts, and driver behavior dashboard) |
+| **[Samsara](https://www.samsara.com/)** | Connected operations platform with AI safety scoring, harsh-event detection, and insurance underwriting telemetry. | **$27–$33/vehicle/month** (Core telematics subscription + $99 upfront hardware/device) | **30-day free trial** (evaluation hardware units and full cloud analytics dashboard access) |
+| **[Motive](https://gomotive.com/)** | AI-driven telematics and dashcam safety platform with real-time driver risk scoring and commercial insurance integrations. | **$25/vehicle/month** (Starter fleet tracking & telematics tier) | **14-day free trial** (includes hardware gateway demo unit and safety management portal) |
+| **[DriveQuant](https://www.drivequant.com/)** | Smartphone telematics SDK (DriveKit) and white-label apps for driving scoring, eco-driving, and pay-how-you-drive insurance. | **$250/month** base developer plan (~$0.50–$1.20/active user/month at scale) | **30-day free trial** (access to DriveKit SDK sandbox, API tokens, and GitHub demo apps) |
+| **[Cambridge Mobile Telematics (CMT)](https://www.cmtelematics.com/)** | Category-leading smartphone telematics & IoT platform (DriveWell) powering insurer UBI programs and crash detection. | **$0.80/active driver/month** (Starter volume tier with $1,500/month platform fee) | **60-day pilot trial** (includes SDK sandbox access, tag hardware samples, and scoring analytics dashboard) |
+| **[Greater Than](https://www.greaterthan.eu/)** | AI risk analytics API (Enerfy AI) calculating crash probability, DriverDNA profiles, and climate impact from telematics data. | **$1,000/month** API starter tier (~$1.00 per analyzed vehicle/month) | **30-day free trial** (trial API key with up to 1,000 trip risk calculations) |
+| **[IMS (Insurance & Mobility Solutions)](https://www.ims.tech/)** | Insurance telematics platform for smartphone and OBD-based UBI, claims automation, and driver coaching. | **$2,500 one-time pilot bundle** / **$1.50–$3.00/policy/month** production tier | **60-day "Try Per Mile" trial** (includes up to 5 self-install OBD devices, mobile app, and insurer portal) |
+| **[Octo Telematics](https://www.octotelematics.com/)** | Global telematics provider offering IoT hardware, smartphone apps, crash reconstruction, and claims triage for insurers. | **$15/vehicle/month** (includes telematics device lease and cloud analytics tier) | **30-day PoC pilot trial** (evaluation package with up to 10 test hardware units and portal access) |
+| **[Sentiance](https://www.sentiance.com/)** | Edge-AI motion and telematics SDK for real-time driving behavior insights, crash detection, and contextual risk scoring. | **$1,500/month** platform tier (~$0.30–$0.75/monthly active user) | **30-day developer trial** (staging environment access with up to 50 test devices) |
+| **[The Floow](https://www.thefloow.com/)** | Telematics data-analytics suite (FloowDrive / FloowFleet) delivering actuarial driver scoring, coaching, and claims prediction. | **$1.20/active driver/month** (with $2,000/month minimum platform commitment) | **30-day pilot trial** (access to FloowDrive test app environment and up to 100 test journeys) |
+| **[LexisNexis Telematics](https://risk.lexisnexis.com/)** | Telematics Data Exchange ingesting OEM and connected-car data for point-of-quote insurance scoring and risk assessment. | **$0.50 per vehicle record query** (with $2,500/month base API subscription fee) | **30-day testing sandbox trial** (limited to 500 test batch policyholder queries) |
+| **[Trak Global / Trakm8](https://www.trakglobal.com/)** | Connected vehicle telematics and micro-hardware solutions for motor insurers, young driver UBI, and fleet operations. | **£12 (~$15)/device/month** (Hardware + SaaS platform bundle) | **30-day trial plan** (includes 2 evaluation plug-and-play OBD devices and full portal access) |
+| **[TrueMotion (CMT)](https://www.cmtelematics.com/)** | Smartphone telematics technology powering trip classification, distraction scoring, and auto insurer UBI apps. | **$0.80/active driver/month** (integrated into CMT DriveWell baseline tier) | **60-day pilot trial** (evaluation sandbox SDK for iOS/Android with up to 50 test users) |
 
 ## Open-Source GitHub Projects
 
