@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928ca" />
+      <stop offset="100%" stop-color="#ff0080" />
+    </linearGradient>
+
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.4" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseRing {
+      0% { r: 10px; opacity: 0.9; }
+      50% { opacity: 0.4; }
+      100% { r: 90px; opacity: 0; }
+    }
+    @keyframes telemetryWave {
+      0% { stroke-dashoffset: 600; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatVehicle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes blinkLed {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; filter: drop-shadow(0 0 6px #10b981); }
+    }
+    @keyframes streamData {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes scanLine {
+      0% { transform: translateY(0px); opacity: 0.1; }
+      50% { opacity: 0.4; }
+      100% { transform: translateY(360px); opacity: 0.1; }
+    }
+    .pulse-1 { animation: pulseRing 3s cubic-bezier(0.2, 0.8, 0.4, 1) infinite; }
+    .pulse-2 { animation: pulseRing 3s cubic-bezier(0.2, 0.8, 0.4, 1) infinite 1s; }
+    .pulse-3 { animation: pulseRing 3s cubic-bezier(0.2, 0.8, 0.4, 1) infinite 2s; }
+    .telemetry-line { stroke-dasharray: 600; stroke-dashoffset: 600; animation: telemetryWave 4s linear infinite; }
+    .car-group { animation: floatVehicle 4s ease-in-out infinite; }
+    .led-green { animation: blinkLed 1.8s ease-in-out infinite; }
+    .scanner { animation: scanLine 6s ease-in-out infinite; }
+    .data-flow { stroke-dasharray: 8, 8; animation: streamData 2s linear infinite; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="360" rx="16" fill="url(#grid)" />
+
+  <!-- Scanning Line Effect -->
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="#00f2fe" stroke-width="1.5" opacity="0.3" class="scanner" />
+
+  <!-- Connected Graph & Constellation Nodes in Background -->
+  <g opacity="0.25">
+    <line x1="80" y1="80" x2="220" y2="120" stroke="#38bdf8" stroke-width="1" />
+    <line x1="220" y1="120" x2="180" y2="280" stroke="#38bdf8" stroke-width="1" />
+    <line x1="1050" y1="60" x2="940" y2="150" stroke="#818cf8" stroke-width="1" />
+    <line x1="940" y1="150" x2="1120" y2="240" stroke="#818cf8" stroke-width="1" />
+    <circle cx="80" cy="80" r="3" fill="#38bdf8" />
+    <circle cx="220" cy="120" r="4" fill="#38bdf8" />
+    <circle cx="180" cy="280" r="3" fill="#38bdf8" />
+    <circle cx="1050" cy="60" r="4" fill="#818cf8" />
+    <circle cx="940" cy="150" r="3" fill="#818cf8" />
+    <circle cx="1120" cy="240" r="4" fill="#818cf8" />
+  </g>
+
+  <!-- Right Side Interactive Telematics Hub Visual -->
+  <g transform="translate(920, 180)">
+    <!-- Radar Waves -->
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#00f2fe" stroke-width="1.5" class="pulse-1" />
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#38bdf8" stroke-width="1.5" class="pulse-2" />
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#818cf8" stroke-width="1.5" class="pulse-3" />
+
+    <!-- Central Telemetry Satellite / Beacon Node -->
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="url(#cyanGrad)" stroke-width="2.5" filter="url(#glow)" />
+    <circle cx="0" cy="0" r="14" fill="#00f2fe" opacity="0.8" />
+    <circle cx="0" cy="0" r="6" fill="#ffffff" />
+
+    <!-- Orbital Telemetry Badges -->
+    <!-- UBI Score Badge -->
+    <g transform="translate(-110, -90)">
+      <rect width="105" height="38" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.2" opacity="0.9" />
+      <circle cx="16" cy="19" r="5" fill="#10b981" class="led-green" />
+      <text x="30" y="16" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">UBI SCORE</text>
+      <text x="30" y="30" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">96 / 100</text>
+    </g>
+
+    <!-- Crash Detection Badge -->
+    <g transform="translate(45, -80)">
+      <rect width="115" height="38" rx="8" fill="#1e293b" stroke="#00f2fe" stroke-width="1.2" opacity="0.9" />
+      <text x="14" y="16" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">CRASH SENSING</text>
+      <text x="14" y="30" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">✓ AI Active</text>
+    </g>
+
+    <!-- Speed & G-Force Badge -->
+    <g transform="translate(-120, 60)">
+      <rect width="110" height="38" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.2" opacity="0.9" />
+      <text x="14" y="16" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">TELEMETRY</text>
+      <text x="14" y="30" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">0.12g Smooth</text>
+    </g>
+
+    <!-- Connected Vehicle Icon (Isometric/Modern) -->
+    <g class="car-group" transform="translate(40, 50)">
+      <rect width="100" height="42" rx="8" fill="#0f172a" stroke="url(#cyanGrad)" stroke-width="1.5" />
+      <path d="M 22 28 L 32 16 L 68 16 L 78 28 Z" fill="#0284c7" opacity="0.7" />
+      <circle cx="30" cy="30" r="5" fill="#38bdf8" />
+      <circle cx="70" cy="30" r="5" fill="#38bdf8" />
+      <text x="38" y="24" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700">IoT SYNC</text>
+    </g>
+  </g>
+
+  <!-- Live Dynamic Sensor Waveform (Bottom Strip) -->
+  <path d="M 60 310 Q 150 280, 240 310 T 420 310 T 600 270 T 780 330 T 960 300 T 1140 310" 
+        fill="none" stroke="url(#cyanGrad)" stroke-width="2" opacity="0.7" class="telemetry-line" filter="url(#subtleGlow)" />
+  <path d="M 60 310 Q 150 330, 240 300 T 420 280 T 600 320 T 780 290 T 960 320 T 1140 300" 
+        fill="none" stroke="#7928ca" stroke-width="1.5" opacity="0.4" class="data-flow" />
+
+  <!-- Left Content Branding & Headers -->
+  <g transform="translate(70, 75)">
+    <!-- Category Pill Tag -->
+    <g>
+      <rect width="210" height="28" rx="14" fill="#1e293b" stroke="#0ea5e9" stroke-width="1" />
+      <circle cx="14" cy="14" r="4" fill="#10b981" class="led-green" />
+      <text x="26" y="18" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">INSURTECH &amp; TELEMETRY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="72" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" font-size="38" font-weight="900" letter-spacing="-0.5">
+      Awesome Insurance Telematics
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="108" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400">
+      The definitive directory of <tspan fill="#38bdf8" font-weight="600">SaaS Platforms</tspan>, <tspan fill="#a855f7" font-weight="600">Edge SDKs</tspan> &amp; <tspan fill="#34d399" font-weight="600">Open-Source UBI Pipelines</tspan>
+    </text>
+
+    <!-- Tech Stack Feature Badges -->
+    <g transform="translate(0, 135)">
+      <!-- Item 1 -->
+      <rect x="0" y="0" width="130" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="10" y="17" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">🚗 Usage-Based (UBI)</text>
+
+      <!-- Item 2 -->
+      <rect x="140" y="0" width="135" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="150" y="17" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">📊 Driver Risk Scoring</text>
+
+      <!-- Item 3 -->
+      <rect x="285" y="0" width="135" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="295" y="17" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">📱 Mobile &amp; OBD SDKs</text>
+
+      <!-- Item 4 -->
+      <rect x="430" y="0" width="130" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="440" y="17" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">💥 Crash Detection</text>
+    </g>
+  </g>
+</svg>
